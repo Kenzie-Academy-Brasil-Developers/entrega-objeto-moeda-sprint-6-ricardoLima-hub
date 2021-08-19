@@ -16,10 +16,10 @@ const coin = {
     toHTML: function () {//prepara os resultados em forma de imagem
       const image = document.createElement("img");
         if (this.state === 0){
-            image.src = "../coinObject/assets/heads.png";
+            image.src = "./assets/heads.png";
             image.alt = "Heads";
         } else {
-            image.src = "../coinObject/assets/tails.png";
+            image.src = "./assets/tails.png";
             image.alt = "Tails";
         }
       return image;
@@ -39,6 +39,8 @@ const coin = {
     return results
   }
   
+  display20Flips();
+
   function display20Images() {//display dos resultados em forma de imagem
     const results = [];
     const divResults = document.createElement("div");
@@ -51,3 +53,5 @@ const coin = {
     document.body.appendChild(divResults);
     return results
   }
+
+  display20Images();
